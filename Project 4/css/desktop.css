@@ -1,0 +1,10 @@
+@media only screen and (min-width: 992px) {
+    /* For desktop: */
+li a {
+    font-size: 30px;
+    padding: 0 15px 0 15px;
+}
+#getnews {
+    margin: 0 5% 0 5%;
+}
+}

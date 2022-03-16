@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <style>
+        #next { 
+            display: none;
+            position:absolute;
+            top: 230px;
+
+        }
+        #info {
+            display: none; 
+            font-weight: bold;
+
+        }
+        #more {
+            display:none;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        //Chạy hàm sau khi click vào nút "Try it"
+        function notify() {
+            alert("Chào mừng bạn đến với ứng dụng JavaScript đầu tiên");
+            var name = prompt("Hãy nhập tên của bạn");
+            var city = prompt("Hãy nhập thành phố bạn đang sống");
+            var mobile = prompt("Hãy nhập số điện thoại của bạn");
+            var year = prompt("Hãy nhập năm sinh");
+            var currentyear = new Date().getFullYear();
+            // Vòng lặp bắt buộc năm sinh phải nhỏ hơn hoặc bằng năm hiện tại
+            while (year > currentyear) {
+                var year = prompt("Hãy nhập lại năm sinh");
+            }
+            var age = currentyear - year;
+            //Hiển thị thông tin nhập vào
+            document.getElementById("info").style.display = "block";
+            document.getElementById("name").innerHTML="Tên của bạn: "+ name;
+            document.getElementById("city").innerHTML="Thành phố bạn đang sống: "+ city;
+            document.getElementById("mobile").innerHTML="Số điện thoại của bạn: "+ mobile;
+            document.getElementById("age").innerHTML="Tuổi của bạn là: "+ age + " tuổi";
+            //Hiển thị nút "Bước tiếp theo"
+            document.getElementById("next").style.display = "block";
+        }
+        //Chạy hàm khi click vào nút "Bước tiếp theo"
+        function step() {
+            var email = prompt("Hãy nhập Email của bạn");
+            var job = prompt("Công việc của bạn là gì?");
+            var hobby = prompt("Sở thích của bạn?");
+            //Hiển thị thông tin nhập vào
+            document.getElementById("email").innerHTML= "Địa chỉ Email của bạn: "+ email;
+            document.getElementById("job").innerHTML="Công việc của bạn là: "+ job;
+            document.getElementById("hobby").innerHTML="Sở thích của bạn là: "+ hobby;
+            document.getElementById("next").style.display = "none";
+            document.getElementById("more").style.display = "block";
+        }
+    </script>
+    <body>
+        <p>Click the button to display an alert box</p>
+        <button onclick="notify()" id="tryit">Try it</button><br>
+        <div id="info">
+            <p id="name"></p>
+            <p id="city"></p>
+            <p id="mobile"></p>
+            <p id="age"></p>
+        </div>
+        <button onclick="step()" id="next">Bước tiếp theo</button>
+        <div id="more">
+            <p id="email"></p>
+            <p id="job"></p>
+            <p id="hobby"></p>
+        </div>
+    </body>
+</html>

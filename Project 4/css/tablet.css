@@ -1,0 +1,23 @@
+@media only screen and (min-width: 768px) {
+    /* For tablet */
+.searchtool {
+    padding-top: 370px;
+}
+.news img {
+    width: 49%;
+    float: left;
+}
+.news-content {
+    width: 49%;
+    float: right;
+    clear:both;
+}
+.news-content h6 {
+    display: block;
+    font-size: 15px;
+}
+.col-2 {
+    width: 50%;
+    float: left;
+}
+}

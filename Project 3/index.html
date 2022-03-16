@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=vi>
+    <head>
+        <title>Class Marksheet</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="desktop.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <form id="info">
+            <h1>Class Marksheet</h1>
+            <h3>Họ và tên</h3>
+            <div>
+            <input type="text" id="name"><br>
+            <h3>Điểm Toán</h3>
+            </div>
+            <input type="number" id="math"><br>
+            <h3>Điểm Lý</h3>
+            <input type="number" id="phys"><br>
+            <h3>Điểm Hóa</h3>
+            <input type="number" id="chem"><br>
+        </form>
+        
+        <div class="buttonstyle">
+            <button id="enter">Nhập</button>
+        </div>
+        <h2>Bảng điểm</h2>
+        <table id="myTable">
+            <tr>
+                <td><strong>STT</strong></td>
+                <td><strong>Họ và tên</strong></td>
+                <td><strong>Toán</strong></td>
+                <td><strong>Lý</strong></td>
+                <td><strong>Hóa</strong></td>
+                <td><strong>Điểm trung bình</strong></td>
+                <td><strong>Xếp loại</strong></td>
+                <td><strong><button type="button" class="delete-row">Xóa dữ liệu</button></strong></td>
+            </tr>
+        </table>
+        
+        <div class="buttonstyle2">
+            <button id="avgmark">Tính điểm trung bình</button>
+            <button id="goodStudent">Xác định <br>Học sinh giỏi</button>
+            <button id="studentrank">Xếp loại <br>Học lực</button>
+            <button onclick="exportTableToExcel('myTable', 'Mark-sheet')" id="export">Export To Excel</button>
+        </div>
+    </body>
+</html>
